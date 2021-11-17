@@ -23,7 +23,7 @@ public class TicketController {
         return ResponseEntity.ok(ticketService.getAllTickets());
     }
 
-    @GetMapping("/{ticketId}")
+    @GetMapping("/{id}")
     public ResponseEntity<Ticket> findTicketById(@PathVariable Long ticketId) {
         return ResponseEntity.ok(ticketService.findTicketById(ticketId));
     }
@@ -33,7 +33,7 @@ public class TicketController {
         return ResponseEntity.ok(ticketService.updateTicket(ticketId, numberOfLines));
     }
 
-    @PutMapping("/status/{ticketId}")
+    @PutMapping("/status/{id}")
     public ResponseEntity<Ticket> getTicketStatus(@PathVariable Long ticketId) {
         return ResponseEntity.ok(ticketService.getTicketStatus(ticketId));
     }

@@ -11,7 +11,7 @@ import javax.persistence.*;
 public class Line {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long lineId;
+    private Long id;
 
     private int lineValueOne;
 

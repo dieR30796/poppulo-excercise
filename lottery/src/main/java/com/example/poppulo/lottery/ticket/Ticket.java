@@ -12,8 +12,8 @@ import java.util.List;
 @Entity
 public class Ticket {
     @Id
-    @GeneratedValue
-    private Long ticketId;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<Line> lineList;
