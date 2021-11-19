@@ -24,8 +24,8 @@ public class TicketController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Ticket> findTicketById(@PathVariable Long ticketId) {
-        return ResponseEntity.ok(ticketService.findTicketById(ticketId));
+    public ResponseEntity<Ticket> findTicketById(@PathVariable Long id) {
+        return ResponseEntity.ok(ticketService.findTicketById(id));
     }
 
     @PutMapping
@@ -34,7 +34,7 @@ public class TicketController {
     }
 
     @PutMapping("/status/{id}")
-    public ResponseEntity<Ticket> getTicketStatus(@PathVariable Long ticketId) {
-        return ResponseEntity.ok(ticketService.getTicketStatus(ticketId));
+    public ResponseEntity<Ticket> getTicketStatus(@PathVariable Long id) {
+        return ResponseEntity.ok(ticketService.getTicketStatus(id));
     }
 }
